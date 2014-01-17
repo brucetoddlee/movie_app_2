@@ -1,26 +1,22 @@
 <title>Details</title>
 
-<h2>Movie Poster</h2>
+<h2><%= "#{@result2["Title"]}" %></h2>
 
 <img src="<%= "#{@result2["Poster"]}" %>"><br>
 
 <ul>
 
-<li><%= "#{@result2["Plot"]}" %></li>
-<li><%= "#{@result2["Released"]}" %></li>
-<li><%= "#{@result2["Rated"]}" %></li>
-<li><%= "#{@result2["Runtime"]}" %></li>
-<li><%= "#{@result2["Genre"]}" %></li>
-<li><%= "#{@result2["Director"]}" %></li>
-<li><%= "#{@result2["Actors"]}" %></li>
+<li>Release date: <%= "#{@result2["Released"]}" %></li>
+<li>Genre: <%= "#{@result2["Genre"]}" %></li>
+<li>Rating: <%= "#{@result2["Rated"]}" %></li>
+<li>Runtime: <%= "#{@result2["Runtime"]}" %></li>
+
+<li>Director: <%= "#{@result2["Director"]}" %></li>
+<li>Cast: <%= "#{@result2["Actors"]}" %></li>
+<li>Plot summary: <%= "#{@result2["Plot"]}" %></li>
+
+<li><a href ="http://www.imdb.com/title/<%= "#{@result2["imdbID"]}" %>">IMDB page</a></li>
 
 </ul>
 
 <a href="/">New Search</a>
-
-
-
-<!-- "Plot", "Released Year", "Rated", "Runtime", "Genre", "Director", and "Actors". This should be on the poster page. (Optional: Add a link to the actual IMDB page). -->
-
-
-
