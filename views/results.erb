@@ -1,0 +1,16 @@
+<title>Search Results</title>
+
+<h2>Search Results</h2>
+
+<ul>
+
+<% @result["Search"].map do |search_hash| %>
+
+    <li><a href = '/poster/<%= "#{search_hash["imdbID"]}"%>' > 
+    <span>Title: </span> <%= search_hash["Title"] %>, <span>Year: </span><%= search_hash["Year"] %> 
+    </a></li>
+    
+<% end %>
+
+</ul>
+
