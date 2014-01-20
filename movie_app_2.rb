@@ -5,7 +5,7 @@ require 'json'
 require 'pry'
 
 
-get "/" do
+get '/' do
 	erb :index
 end
 
@@ -29,3 +29,9 @@ get '/poster/:imdb' do |imdb_id|
 	erb :poster
 end
 
+
+# error handling
+
+# if result["Response"] == "False"
+# 	@bad_results = true
+# 	redirect '/'
