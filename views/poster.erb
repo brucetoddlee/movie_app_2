@@ -1,22 +1,61 @@
 <title>Details</title>
 
-<h2><%= "#{@result2["Title"]}" %></h2>
+<div class="container">
+	
+	<h2><%= "#{@result2["Title"]}" %></h2>
 
-<img src="<%= "#{@result2["Poster"]}" %>"><br>
+	<div class="row">
 
-<ul>
+		<div class="col-md-4">
 
-<li>Release date: <%= "#{@result2["Released"]}" %></li>
-<li>Genre: <%= "#{@result2["Genre"]}" %></li>
-<li>Rating: <%= "#{@result2["Rated"]}" %></li>
-<li>Runtime: <%= "#{@result2["Runtime"]}" %></li>
+			<img src="<%= "#{@result2["Poster"]}" %>"><br>
 
-<li>Director: <%= "#{@result2["Director"]}" %></li>
-<li>Cast: <%= "#{@result2["Actors"]}" %></li>
-<li>Plot summary: <%= "#{@result2["Plot"]}" %></li>
+		</div> <!-- end col -->
 
-<li><a href ="http://www.imdb.com/title/<%= "#{@result2["imdbID"]}" %>">IMDB page</a></li>
+		<div class="col-md-8">
+			
+			<table class="table table-hover">
+			<tr>
+			<td>Release date</td>
+			<td><%= "#{@result2["Released"]}" %></td>
+			</tr>
+			<tr>
+			<td>Genre</td>
+			<td><%= "#{@result2["Genre"]}" %></td>
+			</tr>
+			<tr>
+			<td>Rating</td>
+			<td><%= "#{@result2["Rated"]}" %></td>
+			</tr>
+			<tr>
+			<td>Runtime</td>
+			<td><%= "#{@result2["Runtime"]}" %></td>
+			</tr>
+			<tr>
+			<td>Director</td>
+			<td><%= "#{@result2["Director"]}" %></td>
+			</tr>
+			<tr>
+			<td>Cast</td>
+			<td><%= "#{@result2["Actors"]}" %></td>
+			</tr>
+			<tr>
+			<td>Plot summary</td>
+			<td><%= "#{@result2["Plot"]}" %></td>
+			</tr>
+			<tr>
+			<td>IMDB page</td>
+			<td><a href ="http://www.imdb.com/title/<%= "#{@result2["imdbID"]}" %>">Link</a></td>
+			</tr>
 
-</ul>
+			</table>
 
-<a href="/">New Search</a>
+		</div> <!-- end col -->
+	
+	</div> <!-- end row -->
+
+<div class="new_search_link">
+	<a href="/">New Search</a>
+</div> <!-- end new_search_link -->
+
+</div> <!-- end container -->
