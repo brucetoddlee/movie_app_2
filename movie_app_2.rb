@@ -14,8 +14,8 @@ post '/result' do
 
 	# Make a request to the omdb api here!
 	response = Typhoeus.get("http://www.omdbapi.com/", :params => { :s => search_str })
-	@result = JSON.parse(response.body)
-	# @movies_arr = result["Search"].sort{|el1, el2| el1["Year"] <=> el2["Year"]}
+	result = JSON.parse(response.body)
+	@movies_arr = result["Search"].sort{ |el1, el2| el1["Year"] <=> el2["Year"] }.reverse
 
 	erb :results
 end
